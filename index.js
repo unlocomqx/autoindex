@@ -29,6 +29,7 @@ glob("**/", async (error, paths) => {
 		const operations = [];
 		if (!fs.existsSync(target)) {
 			copied++;
+			console.log(`copying ${target}`);
 			await fs.copy('index.php', target);
 		}
 	}
