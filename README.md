@@ -11,3 +11,10 @@ node node_modules/ps_autoindex
 ...  
 "autoindex": "node node_modules/ps_autoindex/index.js",  
 ...  
+
+# Ingoring folders
+You can use a .gitignore file to ignore folders.  
+**For example:**  
+node_modules  
+dist  
+...
