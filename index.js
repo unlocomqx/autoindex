@@ -20,16 +20,18 @@ if (!fs.existsSync('index.php')) {
 
 // get all folders in current directory
 glob("**/", async (error, paths) => {
-	console.log(`found ${paths.length} folders`);
+	filtered_paths = ig.filter(paths);
+	console.log(`found ${paths.length} folders in total`);
+	console.log(`found ${filtered_paths.length} folders after filtering`);
 	console.log('copying index.php file');
 	let copied = 0;
-	for (const path of paths) {
+	for (const path of filtered_paths) {
 		const target = `${path}index.php`;
 		// make sure not to overwrite existing index.php files
 		const operations = [];
 		if (!fs.existsSync(target)) {
 			copied++;
-			console.log(`copying to ${target}`);
+			console.log(`copying ${target}`);
 			await fs.copy('index.php', target);
 		}
 	}
