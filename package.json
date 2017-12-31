@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Automatically add an \"index.php\" in all directories recursively",
   "main": "index.js",
+  "repository": "https://github.com/unlocomqx/autoindex",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
