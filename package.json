@@ -1,0 +1,20 @@
+{
+  "name": "autoindex",
+  "version": "1.0.0",
+  "description": "Automatically add an \"index.php\" in all directories recursively",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "autoindex",
+    "prestashop"
+  ],
+  "author": "Tuni-Soft",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^5.0.0",
+    "glob": "^7.1.2",
+    "ignore": "^3.3.7"
+  }
+}
