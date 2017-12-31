@@ -1,5 +1,5 @@
 {
-  "name": "autoindex",
+  "name": "ps_autoindex",
   "version": "1.0.0",
   "description": "Automatically add an \"index.php\" in all directories recursively",
   "main": "index.js",
