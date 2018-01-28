@@ -1,6 +1,6 @@
 {
   "name": "ps_autoindex",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "Automatically add an \"index.php\" in all directories recursively",
   "main": "index.js",
   "repository": "https://github.com/unlocomqx/autoindex",
