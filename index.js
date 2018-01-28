@@ -1,11 +1,22 @@
-const fs = require('fs-extra');
-const glob = require("glob");
-const ignore = require("ignore");
+const fs = require('fs-extra'),
+	glob = require("glob"),
+	ignore = require("ignore"),
+	parseArgs = require('minimist');
 let ignore_rules = [];
 
-if (fs.existsSync('.gitignore')) {
-	console.log('found .gitignore, reading rules');
-	ignore_rules = fs.readFileSync('.gitignore').toString().split(/\r?\n/);
+var args = process.argv.slice(2);
+
+var argv = parseArgs(args, opts = {
+	'string': true
+});
+
+const ignore_file = argv[ 'ignore-file' ] || '.gitignore';
+
+if (fs.existsSync(ignore_file)) {
+	console.log(`found ${ignore_file}, reading rules`);
+	ignore_rules = fs.readFileSync(ignore_file).toString().split(/\r?\n/);
+} else {
+	console.log(`no ${ignore_file} found`);
 }
 
 // add ignore_rules to the ignore module
