@@ -18,3 +18,6 @@ You can use a .gitignore file to ignore folders.
 node_modules  
 dist  
 ...
+
+You can also use a custom ignore file like this  
+node node_modules/ps_autoindex/index.js --ignore-file=.autoindex
