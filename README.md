@@ -21,3 +21,7 @@ dist
 
 You can also use a custom ignore file like this  
 node node_modules/ps_autoindex/index.js --ignore-file=.autoindex
+
+Example of .autoindex:  
+node_modules  
+vendor  
